@@ -180,7 +180,7 @@ export const agentApi = {
   getTestCategories(): Promise<{ test_categories: any[] }> {
     return request.get('/api/agents/test-types')
       .then(response => ({
-        test_categories: response.test_types.map((t: any) => ({
+        test_categories: response.data.test_types.map((t: any) => ({
           code: t.value,
           name: t.label
         }))

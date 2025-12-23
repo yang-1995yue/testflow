@@ -159,7 +159,7 @@ export const projectApi = {
   },
 
   // 获取项目测试用例列表
-  getProjectTestCases: (projectId: number, params?: { view_mode?: 'hierarchy' | 'flat'; keyword?: string; status?: string; priority?: string }): Promise<any[]> => {
+  getProjectTestCases: (projectId: number, params?: { view_mode?: 'hierarchy' | 'flat'; keyword?: string; status?: string; priority?: string; test_category?: string; module_id?: string | number; design_method?: string }): Promise<any[]> => {
     return api.get(`/api/projects/${projectId}/test-cases`, { params })
   },
 

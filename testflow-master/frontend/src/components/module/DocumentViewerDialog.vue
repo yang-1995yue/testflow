@@ -312,7 +312,7 @@ const loadContent = async () => {
       `/api/projects/${props.projectId}/requirements/files/${props.document.id}/content`
     )
     
-    const data = response as FileContentResponse
+    const data = response.data as FileContentResponse
     
     if (data.is_extracted && data.extracted_content) {
       content.value = data.extracted_content
